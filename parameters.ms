@@ -1,8 +1,8 @@
 .nr PL 29.4c
-.nr LL 16.0c
+.nr LL 19.0c
 .nr HM 2.0c
 .nr FM 2.0c
-.nr PO 2.5c
+.nr PO 1.0c
 .nr PS 12
 .nr VS 14
 .ds MONTH1 January
@@ -19,6 +19,7 @@
 .ds MONTH12 December
 .ds MO \E*[MONTH\n[mo]]
 .ds DY \*[MO] \n[dy], \n[year]
+.defcolor mgreen rgb #ccffdd
 .EQ
 delim $$
 .EN
