@@ -2,15 +2,31 @@
 Odlingslott
 .PS 6
 scale = 2.54
-LOTT: [
-      box width 10 height 10 with .nw at 0,0
-      for y = 0 to 10 by 0.1 do {
-      	  line from last box .nw + (0,y) to last box .nw + (10,y)
+# LOTT:[ box width 10 height 10 with .nw at 0,0 ]
+# LOTT:[ box width 10 height 10 at 0,0 ]
+
+
+GRID: [
+      box invis with .nw at 0,0
+      for y = 0 to 100 by 1  do {
+	 if ((y % 10) == 0 ) then {
+	    line color "blue" from (0,y*0.1) to (10,y*0.1)
+	 } else {
+	   line color "lightblue" from (0,y*0.1) to (10,y*0.1)
+	 }
       }
-      for x = 0 to 10 by 0.1 do {
-          line from last box .nw + (x,0) to last box .nw + (x,10)
+
+      for x = 0 to 100 do {
+         if ((x % 10) == 0 ) then {
+	    line color "blue" from (x*0.1,0) to (x*0.1,10)
+	 } else {
+	    line color "lightblue" from (x*0.1,0) to (x*0.1,10)
+	 }
       }
 
 ]
+      
+box width 10 height 10 with .nw at GRID.nw 
+
 .PE
 
