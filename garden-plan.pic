@@ -1,12 +1,12 @@
 .LP
 Odlingslott
-.PS 6
+.PS 7
 scale = 2.54
 # LOTT:[ box width 10 height 10 with .nw at 0,0 ]
 # LOTT:[ box width 10 height 10 at 0,0 ]
 
 
-GRID: [
+Grid: [
       box invis with .nw at 0,0
       for y = 0 to 100 by 1  do {
 	 if ((y % 10) == 0 ) then {
@@ -26,7 +26,22 @@ GRID: [
 
 ]
       
-box width 10 height 10 with .nw at GRID.nw 
+Hela: box width 10 height 10 with .nw at Grid.nw
+
+
+Center:  box invis wid 4.25 ht 6 with .nw at Grid.nw + (2,-2.0) 
+
+Mitten: spline from Center.nw - (0,0.5) to Center.n then to Center.ne - (0,0.5); line from last spline.start to Center.sw then to Center.se then to  Center.ne - (0,0.5)
+
+Kryddor: box  shaded "mgreen" wid 3.5 ht 1.75 "Kryddor" with .sw at Center.sw + (0.35,0.3)
+
+Greenhouse: box  shaded "mgreen"  wid 2 ht 3 "Växthus" with .nw at Hela.nw + (0.25,-3)
+
+Wine: box shaded  "mgreen"  wid 1.5 ht 4 "Vinranka" with .nw at Hela.nw + (0,-6)
+
+Perenner:  box  shaded "mgreen"  wid 4.5 ht 1.4 "Perenner" with .sw at Wine.se 
+
+Vegetables: box wid 3.25 ht 10 with .ne at Hela.ne
 
 .PE
 
