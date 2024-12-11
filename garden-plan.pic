@@ -1,0 +1,16 @@
+.LP
+Odlingslott
+.PS 6
+scale = 2.54
+LOTT: [
+      box width 10 height 10 with .nw at 0,0
+      for y = 0 to 10 by 0.1 do {
+      	  line from last box .nw + (0,y) to last box .nw + (10,y)
+      }
+      for x = 0 to 10 by 0.1 do {
+          line from last box .nw + (x,0) to last box .nw + (x,10)
+      }
+
+]
+.PE
+
