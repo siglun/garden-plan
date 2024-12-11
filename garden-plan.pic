@@ -29,19 +29,31 @@ Grid: [
 Hela: box width 10 height 10 with .nw at Grid.nw
 
 
-Center:  box invis wid 4.25 ht 6 with .nw at Grid.nw + (2,-2.0) 
+Center:  box invis wid 4.15 ht 6.3 with .nw at Grid.nw + (2,-2.0) 
 
 Mitten: spline from Center.nw - (0,0.5) to Center.n then to Center.ne - (0,0.5); line from last spline.start to Center.sw then to Center.se then to  Center.ne - (0,0.5)
 
-Kryddor: box  shaded "mgreen" wid 3.5 ht 1.75 "Kryddor" with .sw at Center.sw + (0.35,0.3)
+Kryddor: box  shaded "mgreen" wid 3.5 ht 2.0 "Kryddor" with .sw at Center.sw + (0.35,0.3)
 
-Greenhouse: box  shaded "mgreen"  wid 2 ht 3 "Växthus" with .nw at Hela.nw + (0.25,-3)
+VegerablesA: box  shaded "mgreen" wid 3.5 ht 2.0 "Grönsaker A" with .sw at Kryddor.nw + (0,0.3)
 
-Wine: box shaded  "mgreen"  wid 1.5 ht 4 "Vinranka" with .nw at Hela.nw + (0,-6)
+Greenhouse: box  shaded "mgreen"  wid 2 ht 3.2 "Växthus" with .nw at Hela.nw + (0.25,-3)
 
-Perenner:  box  shaded "mgreen"  wid 4.5 ht 1.4 "Perenner" with .sw at Wine.se 
+Wine: box shaded  "mgreen"  wid 1.35 ht 3.25 "Vinranka" with .sw at Hela.sw
+
+Perenner:  box  shaded "mgreen"  wid 4.5 ht 1.0 "Perenner" with .sw at Wine.se 
 
 Vegetables: box wid 3.25 ht 10 with .ne at Hela.ne
+
+VegetablesB: box shaded "mgreen"  wid 1.25 ht 4.2 "Grönsaker" "B" with .nw at Vegetables.nw + (0.25,-0.25)
+
+VegetablesC: box shaded "mgreen"  wid 1.25 ht 4.2 "Grönsaker" "C" with .ne at Vegetables.ne - (0.25,0.25)
+
+VegetablesD: box shaded "mgreen"  wid 1.25 ht 4.0 "Grönsaker" "D" with .nw at VegetablesB.sw + (0,-0.25)
+
+VegetablesE: box shaded "mgreen"  wid 1.25 ht 4.0 "Grönsaker" "E" with .nw at VegetablesC.sw + (0,-0.25)
+
+Tulips: box shaded "mgreen" wid 3.0 ht 1.0 "Tulpaner" "osv" with .se at Vegetables.se
 
 .PE
 
